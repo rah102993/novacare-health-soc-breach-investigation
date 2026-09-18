@@ -215,19 +215,21 @@ This distinction was important to avoid treating ordinary encrypted web traffic 
 
 ## Evidence
 
-Screenshots supporting the investigation are maintained in the `screenshots` directory.
+Selected investigation evidence is maintained in the [`evidence`](evidence/) directory. Each screenshot is indexed and linked for direct review.
 
-The evidence includes:
+| ID | Evidence | What It Demonstrates |
+|---|---|---|
+| E01 | [Wazuh Endpoint Monitoring](evidence/E01-wazuh-endpoint-monitoring.png) | Confirms that an Ubuntu endpoint was actively monitored by Wazuh |
+| E02 | [Kali-to-Ubuntu Connectivity](evidence/E02-kali-to-ubuntu-connectivity.png) | Confirms network connectivity from the simulated threat source to the monitored Ubuntu endpoint |
+| E03 | [SSH Authentication Failures and Log Correlation](evidence/E03-ssh-authentication-failures-and-log-correlation.png) | Shows repeated failed SSH authentication attempts from `192.168.10.100` and subsequent successful authentication in native Ubuntu logs |
+| E04 | [Wazuh SSH Failure Detection](evidence/E04-wazuh-ssh-failure-detection.png) | Shows Wazuh detection of failed SSH authentication activity and associated MITRE ATT&CK classification |
+| E05 | [Successful SSH Authentication](evidence/E05-successful-ssh-authentication.png) | Confirms successful SSH authentication from `192.168.10.100` to the monitored endpoint |
+| E06 | [Wazuh Successful Authentication Classification](evidence/E06-wazuh-successful-authentication-classification.png) | Shows Wazuh rule `5715` and MITRE ATT&CK `T1078`/`T1021` mapping for the successful SSH authentication event |
+| E07 | [Privileged Command Execution](evidence/E07-privileged-command-execution.png) | Shows sudo execution of `/usr/bin/whoami` as root following remote authentication |
+| E08 | [Wazuh Sudo/Root Detection](evidence/E08-wazuh-sudo-root-alerts.png) | Shows Wazuh detection of successful sudo-to-root activity using rule `5402` |
+| E09 | [MITRE ATT&CK Event Overview](evidence/E09-mitre-attack-event-overview.png) | Shows MITRE ATT&CK-mapped security events associated with the monitored endpoint |
 
-- Wazuh endpoint monitoring
-- MITRE ATT&CK dashboard
-- SSH authentication failure alerts
-- Wazuh brute-force detection
-- Successful SSH authentication
-- Ubuntu authentication logs
-- Successful sudo/root activity
-- Wazuh privilege escalation detection
-- HTTPS connection investigation
+For the complete evidence index, see [`evidence/README.md`](evidence/README.md).
 
 ---
 
