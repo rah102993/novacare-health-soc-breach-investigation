@@ -201,7 +201,6 @@ This distinction was important to avoid treating ordinary encrypted web traffic 
 - Incident timeline reconstruction
 - MITRE ATT&CK mapping
 - Privilege escalation analysis
-- Network connection investigation
 - Evidence-based incident reporting
 - Security control recommendations
 
